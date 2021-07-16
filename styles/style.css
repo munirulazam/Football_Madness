@@ -1,15 +1,240 @@
 
-                        /* fonts */
+                        /*--------------------------------------------------fonts------------------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+                        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+                        
+
+                        
 
 
-/* ----------------------------------GENERAL STYLES--------------------------------------- */
+/*--------------------------------------------------- media queries-------------------------------------------------------- */
+
+
+/* --------------------------------------------------for mobile --------------------------------------------------------------------*/
+
+
+
+@media  screen and (max-width: 640px){
+
+    *{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Poppins;
+        
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: #6C6C6C;
+    }
+
+    img{
+        transform: scale(.8);
+    }
+
+
+    /* ------------====================================---HEADER section-----===============================================--------------- */
+
+    .header-main{
+
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: repeat(1,1fr);
+        grid-row-gap: 50px;
+        background: #2D25A0;
+
+    }
+
+    .header-text{
+
+        max-width: 100%;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-align: center;
+    
+    
+        /* positioning */
+        margin-left: 16px;
+        margin-top: 112px;
+    }
+
+    .watch-now{
+        max-width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #FFFFFF;
+    
+        background:#E02C6D;
+        margin-top: 30px;
+        padding: 10px 24px;
+
+    
+        ;
+    }
+
+    .header-main img{
+        max-width: 100%;
+        margin-left: 15px;
+        transition: 2s;
+        transition-timing-function: ease-in;
+    }
+    
+
+/* ===================================players section=============================== */
+
+.players{
+
+    margin-top: 47px;
+    margin-left: 15px;
+
+
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-row-gap: 24px;
+}
+
+.player-info{
+    
+    max-width: 100%;
+    padding: 15px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player-info img{
+    max-width: 100%;
+
+}
+
+
+.playerinfo-text{
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin: 15px 0;
+}
+
+
+.playerinfo-text h3{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #18191F;
+    margin: 10px 0px;
+}
+
+/* =================================HIGHLIGHTS====================================== */
+    
+.highlights{
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-row-gap: 29px;
+    margin-left: 15px;
+    
+}
+
+.highlights-text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 60px;
+    text-align: center;
+    
+}
+
+.highlights img{
+
+    max-width: 100%;
+    margin-top: 0px 15px;
+    transform: scale(.8);
+}
+
+
+
+/* ===============================best moments======================================== */
+
+.best-moments{
+
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 5%;
+    margin: 5% 5% 0 5%;
+    text-align: center;
+}
+
+.best-moments-text{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+    
+}
+
+.best-moments iframe{
+    width: 100%;
+    height: 300px;
+}
+
+.best-moments::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+
+/* =====================footer======================== */
+
+.footer-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 43px;
+}
+
+.footer-area img{
+    max-width: 100%;
+    transform: scale(.5);
+    margin-top: 20px;
+}
+
+.social-links{
+    
+    font-size: 32px;
+    color: #969bab;
+    
+}
+
+}
+
+
+
+/* ----------------------===============================================================================================================------------for desktops/laptops------------------=======================================================--------------------------------------------- */
+
+@media screen and (min-width: 641px) {
+
+
+    /* ----------------------------------GENERAL STYLES--------------------------------------- */
 
 *{
     margin: 0;
     padding: 0;
     font-family: Poppins;
+}
+
+a{
+    text-decoration: none;
 }
 
 p{
@@ -19,12 +244,20 @@ p{
     color: #6C6C6C;
 }
 
-/* ---------------HEADER section-------------------- */
+img:hover{
+    transition: 1ms;
+    transition-timing-function: ease-in;
+    transform: scale(1.1);
+}
+
+/* ----------------------===========--HEADER section--------================================------------ */
 
 .header-main{
-    width: 1440px;
-    height: 677px;
+    max-width: 100%;
+    /* height: 677px; */
     background: #2D25A0;
+
+
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -33,21 +266,25 @@ p{
 
 .header-text{
 
-    width: 485px;
-    height: 301px;
+    max-width: 100%;
+    /* width: 485px;
+    height: 301px; */
     font-size: 64px;
     font-weight: 700;
     line-height: 80px;
     color: #FFFFFF;
 
-    /* positioning */
+
+
+    /* ============positioning========== */
     margin-left: 156px;
     margin-top: 207px;
 }
 
+/*============================= watch now button ===========================*/
+
 .watch-now{
-    width: 168px;
-    height: 44px;
+    max-width: 100%;
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
@@ -57,24 +294,33 @@ p{
     margin-top: 27px;
     padding: 10px 24px;
 
-    ;
+;
+}
+
+.watch-now:hover{
+    transform: scale(2.5);
 }
 
 .header-main img{
-    width: 80%;
-
+    max-width: 100%;
     margin-top: 153px;
+    
 
 }
 
+.header-main img:hover{
+    transition: 1ms;
+    transition-timing-function: ease-in;
+    transform: scale(1.1);
+}
 
-/* PLAYERS SECTION */
+
+/*======================================= PLAYERS SECTION ======================================*/
 
 
 .players{
 
-    margin-top: 70px;
-    margin-left: 180px;
+    margin: 70px 5% 0 5%;
 
 
     display: grid;
@@ -84,8 +330,11 @@ p{
 }
 
 .player-info{
-    width: 330px;
-    height: 474px;
+    
+    max-width: 100%;
+
+    /* width: 330px;
+    height: 474px; */
     padding: 15px;
     
     background: #FFFFFF;
@@ -93,13 +342,17 @@ p{
 }
 
 .player-info img{
-    width: 300px;
-    height: 256px;
+    max-width: 100%;
+    /* width: 300px;
+    height: 256px; */
 }
 
 .playerinfo-text{
-    width: 300px;
-    height: 154px;
+
+    max-width: 100%;
+
+    /* width: 300px;
+    height: 154px; */
 
     display: flex;
     flex-direction: column;
@@ -114,11 +367,13 @@ p{
     margin: 10px 0px;
 }
 
+/*======================== highlights section============================= */
+
 .highlights{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 69px;
-    margin-left: 182px;
+    margin: 5% 5% 0 5%;
     
 }
 
@@ -126,34 +381,67 @@ p{
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
-    line-height: 60px;
+    line-height: 80px;
     margin-top: 224px;
     
 }
 
 .highlights img{
-    width: 567px;
-    height: 427px;
+
+    max-width: 100%;
     margin-top: 165px;
 }
+
+/* ==========================best moments======================================= */
+
+.best-moments{
+
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    margin: 5% 5% 0 5%;
+}
+
+.best-moments-text{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 80px;
+    
+}
+
+.best-moments iframe{
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    
+}
+
+/* =====================================footer section==================================================== */
 
 .footer-area{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 158px;
+    margin-top: 5%;
 }
 
 .footer-area img{
+    max-width: 100%;
     width: 483.87px;
     height: 110px;
     margin: 20px 0px;
 }
 
 .social-links{
-    
     font-size: 32px;
     color: #969bab;
-
-
 }
+
+
+.fab:hover{
+    transform: scale(1.5);
+}
+}
+
+
